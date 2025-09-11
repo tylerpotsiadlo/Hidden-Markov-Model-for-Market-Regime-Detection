@@ -1,10 +1,7 @@
-# Hidden-Markov-Model-for-Market-Regime-Detection
-Classifies market regime with Gaussian Hidden Markov Model based on S&amp;P500 closing prices since 1994 (test since 2016). Achieves superior Sharpe ratio &amp; alpha with various portfolio allocation mappings.
+# Hidden Markov Model Classification for Equity Regime Detection
+This project implements a regime classification framework for equity markets using a Gaussian Hidden Markov Model.
+The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone, expansion) and design regime-specific portfolio allocations.
 
-# Regime Classification for Equity Markets
-
-This project implements a regime classification framework for equity markets using unsupervised learning and performance analysis.  
-The goal is to identify distinct market regimes (e.g., bear, rebound, expansion) and design regime-specific portfolio allocations.
 
 ---
 
