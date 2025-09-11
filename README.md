@@ -10,10 +10,8 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 - [Gaussian Hidden Markov Model](#gaussian-hidden-markov-model)
 - [Methodology](#methodology)
 - [Data](#data)
-- [Project Structure](#project-structure)
 - [Usage](#usage)
 - [Results](#results)
-- [Key Functions](#key-functions)
 - [Next Steps](#next-steps)
 - [References](#references)
 
@@ -66,14 +64,32 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 ## Data
 - **S&P 500 Index (SP500)**: Benchmark returns.  
 - **Treasury Yield (WGS3MO, FRED)**: Used to estimate the risk-free rate.  
-- **ETFs**: Price data for SPY, BIL, MTUM, SPUU, SH, SPXU.
-
----
-
-## Project Structure
+- **ETFs**: Price data for SPY, BIL, MTUM, SPUU, SH, SPXU. SPY is used to track S&P500 closing prices. BIL is 1-3 month gov't bonds. MTUM is momentum factor stocks ETF. SPUU is S&P 2x long etf. SH is S&P 1x short ETF. SPXU is S&P 2x short ETF.
+- Each ETF's closing price data assumes any payout (dividends, interest income) is reinvested back into the instrument.
 
 ---
 
 ## Usage
-- Use this link to access the notebook: [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://hub.gesis.mybinder.org/user/tylerpotsiadlo--egime-detection-fbvs9d55/doc/workspaces/auto-P/tree/RegimeProject.ipynb)
+- Use this link to access the notebook: [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://hub.gesis.mybinder.org/user/tylerpotsiadlo--egime-detection-fbvs9d55/doc/workspaces/auto-P/tree/RegimeProject.ipynb) (make sure to open in a new tab)
+- You can edit the features of interest, the regime-to-portfolio mapping, and the regime confirmation period hyperparameter
+- I would use caution picking a new ETF or asset to use during a given regime since you expose yourself to overfitting to the test set. For safety, the higher r-squared the asset has with SPY, the better (aside from short-dated gov't bonds, of course).
+- Changing a feature around likely will require you to ascribe a name to each regime the model predicts. For example, in my code, 0 -> Rebound, 1 -> Crash-prone, 2 -> Steady expansion, but these very well may shuffle around if you change the features.
+- You can also tune the hyperparameter for number of regimes to detect.
+
+---
+
+## Results
+- I found that with my set of features, the model successfully modeled 3 distinct regimes: Rebound, Bear/crash-prone, and Steady expansion. Each regime-to-portfolio mapping is predicated on the idea that you decrease your market risk (beta) when the market is crash-prone and increase it when the market is in a positive regime.
+- There are many different combinations of allocations one can choose, but the one I chose as most realistic with a balance of returns and volatility was increasing momentum factor (MTUM) during "Rebound" regime, going completely risk-free (BIL) during "Bear/crash-prone" regime, and index (SPY) during "Steady expansion" regime. This strategy (SPY) achieved 16.9% (15.0%) CAGR since 2016, with a Sharpe ratio of .91 (.75), and with annual alpha of 5.27% (0%). The strategy's Beta was .72 (0).
+- Certain strategies involving shorting the market during its Bear/crash-prone phase provided worse returns, but they performed extremely well in decreasing the strategy's beta. One such example is using the same allocations as above but shorting the market (SH) during the Bear/crash-prone phase. During the same period, this strategy achieved CAGR of 15.8%, Sharpe of .75, annual alpha of 9.2%, with beta of .42. While alpha was higher, this shows the models inherent tradeoff between returns and volatility. This is another reason why I chose the above allocation (MTUM, BIL, SPY) as the most realistic: Shorting the market during 2021 proved devastating, though these losses were more than wiped away when the strategy excelled in 2022 (55% alpha, -.53 beta).
+- For a fund manager looking to decrease their beta, shorting the market during crash/bear would provide a compelling solution. Shorting the market during the Bear/crash-prone regime and sitting in BIL otherwise had a CAGR of 1%, but with its beta of -.31 it posted an annual alpha of 3.6%. Given SPY has a quite low borrow rate estimated at ~.25%, this strategy would provide a robust source of funds.
+- Below, I have included photos of each of the previously mentioned allocations versus the market plus tabular results. You will notice that further increasing risk during the Rebound phase (such as with SPUU) raises the possibility of huge downswings when the model is occasionally wrong (sell-off during Rebound phase), but these losses end up being erased by larger gains.
+- Overall, the model's success hinges on whether it can determine there is too much risk in the market or not.
+** Results of Different Allocations
+
+---
+
+## Next Steps
+- I plan on considering individual stocks/industries next. One important consideration for this route is the effect of upcoming catalysts. I largely looked past this (assumed any significant effect of this factor would be priced into VIX) since this levels out for an index fund.
+- Another interesting path would be creating a model that learns which factors inform your regime. There is an inherent tradeoff here between efficacy and interpretability, since an LSTM architecture could be useful for predicting a regime, but this may be of little use to a fund manager, eager to adjust their beta, who would have little way of gaining insight into why the model makes a given prescription.
 
