@@ -100,6 +100,13 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 - In each strategy note that 0 is Rebound, 1 is Bear/crash-prone, and 2 is Expansion.
 ### Strategy 1: 0: MTUM, 1: BIL, 2: SPY
 ![Strategy 1 Chart](images./strategy1.PNG)
+### Strategy 1: bla bla bla
+<div align="center">
+
+<img src="images./strategy1.PNG" alt="Strategy 1" width="45%"/>
+<img src="images./strategy1.PNG" alt="Strategy 2" width="45%"/>
+
+</div>
 
 ---
 
