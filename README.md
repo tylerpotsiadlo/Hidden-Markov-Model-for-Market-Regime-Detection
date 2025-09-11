@@ -115,6 +115,7 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 <img src="images./strategy1yearly.PNG" alt="Strategy 1 yearly stats" width="45%"/>
 
 </div>
+
 ### Strategy 2: 0: MTUM, 1: SH, 2: SPY
 ![Strategy 2 Chart](images./strategy2.PNG)
 <div align="center">
@@ -123,6 +124,7 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 <img src="images./strategy2yearly.PNG" alt="Strategy 2 yearly stats" width="45%"/>
 
 </div>
+
 ### Strategy 3: 0: BIL, 1: SH, 2: BIL
 ![Strategy 3 Chart](images./strategy3.PNG)
 <div align="center">
@@ -131,6 +133,7 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 <img src="images./strategy3yearly.PNG" alt="Strategy 3 yearly stats" width="45%"/>
 
 </div>
+
 ### Strategy 4: 0: BIL, 1: BIL, 2: SPY
 ![Strategy 4 Chart](images./strategy4.PNG)
 <div align="center">
@@ -139,6 +142,7 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 <img src="images./strategy4yearly.PNG" alt="Strategy 4 yearly stats" width="45%"/>
 
 </div>
+
 ### Strategy 5: 0: BIL, 1: BIL, 2: SPUU
 ![Strategy 5 Chart](images./strategy5.PNG)
 <div align="center">
@@ -147,6 +151,7 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 <img src="images./strategy5yearly.PNG" alt="Strategy 5 yearly stats" width="45%"/>
 
 </div>
+
 ### Strategy 6: 0: BIL, 1: SPXU, 2: BIL
 ![Strategy 6 Chart](images./strategy6.PNG)
 <div align="center">
@@ -155,6 +160,7 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 <img src="images./strategy6yearly.PNG" alt="Strategy 6 yearly stats" width="45%"/>
 
 </div>
+
 ### Strategy 7: 0: SPUU, 1: BIL, 2: SPUU
 ![Strategy 7 Chart](images./strategy7.PNG)
 <div align="center">
@@ -163,6 +169,7 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 <img src="images./strategy7yearly.PNG" alt="Strategy 7 yearly stats" width="45%"/>
 
 </div>
+
 ### Strategy 8: 0: SPUU, 1: SPXU, 2: SPUU
 ![Strategy 8 Chart](images./strategy8.PNG)
 <div align="center">
