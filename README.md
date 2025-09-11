@@ -94,3 +94,7 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 - I plan on considering individual stocks/industries next. One important consideration for this route is the effect of upcoming catalysts. I largely looked past this (assumed any significant effect of this factor would be priced into VIX) since this levels out for an index fund.
 - Another interesting path would be creating a model that learns which factors inform your regime. There is an inherent tradeoff here between efficacy and interpretability, since an LSTM architecture could be useful for predicting a regime, but this may be of little use to a fund manager, eager to adjust their beta, who would have little way of gaining insight into why the model makes a given prescription.
 
+---
+
+## References
+
