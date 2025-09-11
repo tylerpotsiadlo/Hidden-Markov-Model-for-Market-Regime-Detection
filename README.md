@@ -102,6 +102,10 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 
 ## Important Functions
 
+-Total/annual alpha
+-risk free rate
+-lookback
+
 ---
 
 ## Results of Different Portfolios
