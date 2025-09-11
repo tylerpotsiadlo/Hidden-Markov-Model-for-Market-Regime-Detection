@@ -89,7 +89,7 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 - Photos on how different regime-to-allocation mappings performed
 - In each strategy note that 0 is Rebound, 1 is Bear/crash-prone, and 2 is Expansion. Allocations are listed in this order.
 #### Strategy 1: 0: MTUM, 1: BIL, 2: SPY
-![Strategy 1 Performance](images./strategy1.jpg)
+![Strategy 1 Chart](images./strategy1.PNG)
 ---
 
 ## Next Steps
