@@ -85,7 +85,8 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 - For a fund manager looking to decrease their beta, shorting the market during crash/bear would provide a compelling solution. Shorting the market during the Bear/crash-prone regime and sitting in BIL otherwise had a CAGR of 1%, but with its beta of -.31 it posted an annual alpha of 3.6%. Given SPY has a quite low borrow rate estimated at ~.25%, this strategy would provide a robust source of funds.
 - Below, I have included photos of each of the previously mentioned allocations versus the market plus tabular results. You will notice that further increasing risk during the Rebound phase (such as with SPUU) raises the possibility of huge downswings when the model is occasionally wrong (sell-off during Rebound phase), but these losses end up being erased by larger gains.
 - Overall, the model's success hinges on whether it can determine there is too much risk in the market or not.
-** Results of Different Allocations
+### Results of Different Allocations
+- Photos on how different regime-to-allocation mappings performed
 
 ---
 
