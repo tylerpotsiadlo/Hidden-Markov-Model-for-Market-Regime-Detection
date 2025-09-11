@@ -87,12 +87,15 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 - Overall, the model's success hinges on whether it can determine there is too much risk in the market or not.
 ### Results of Different Allocations
 - Photos on how different regime-to-allocation mappings performed
-
+- In each strategy note that 0 is Rebound, 1 is Bear/crash-prone, and 2 is Expansion. Allocations are listed in this order.
+#### Strategy 1: 0: MTUM, 1: BIL, 2: SPY
+![Strategy 1 Performance](images./strategy1.jpg)
 ---
 
 ## Next Steps
 - I plan on considering individual stocks/industries next. One important consideration for this route is the effect of upcoming catalysts. I largely looked past this (assumed any significant effect of this factor would be priced into VIX) since this levels out for an index fund.
 - Another interesting path would be creating a model that learns which factors inform your regime. There is an inherent tradeoff here between efficacy and interpretability, since an LSTM architecture could be useful for predicting a regime, but this may be of little use to a fund manager, eager to adjust their beta, who would have little way of gaining insight into why the model makes a given prescription.
+- A useful addition to the project would be creating a function that solves for a regime-to-portfolio mapping given a desired beta. This would be useful to a fund manager who wants a specific beta but is unsure of how to achieve this through a mapping given we cannot know the regime going forward.
 
 ---
 
