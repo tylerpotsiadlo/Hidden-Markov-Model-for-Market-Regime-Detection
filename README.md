@@ -83,19 +83,23 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 - There are many different combinations of allocations one can choose, but the one I chose as most realistic with a balance of returns and volatility was increasing momentum factor (MTUM) during "Rebound" regime, going completely risk-free (BIL) during "Bear/crash-prone" regime, and index (SPY) during "Steady expansion" regime. This strategy (SPY) achieved 16.9% (15.0%) CAGR since 2016, with a Sharpe ratio of .91 (.75), and with annual alpha of 5.27% (0%). The strategy's Beta was .72 (0).
 - Certain strategies involving shorting the market during its Bear/crash-prone phase provided worse returns, but they performed extremely well in decreasing the strategy's beta. One such example is using the same allocations as above but shorting the market (SH) during the Bear/crash-prone phase. During the same period, this strategy achieved CAGR of 15.8%, Sharpe of .75, annual alpha of 9.2%, with beta of .42. While alpha was higher, this shows the models inherent tradeoff between returns and volatility. This is another reason why I chose the above allocation (MTUM, BIL, SPY) as the most realistic: Shorting the market during 2021 proved devastating, though these losses were more than wiped away when the strategy excelled in 2022 (55% alpha, -.53 beta).
 - For a fund manager looking to decrease their beta, shorting the market during crash/bear would provide a compelling solution. Shorting the market during the Bear/crash-prone regime and sitting in BIL otherwise had a CAGR of 1%, but with its beta of -.31 it posted an annual alpha of 3.6%. Given SPY has a quite low borrow rate estimated at ~.25%, this strategy would provide a robust source of funds.
-- Below, I have included photos of each of the previously mentioned allocations versus the market plus tabular results. You will notice that further increasing risk during the Rebound phase (such as with SPUU) raises the possibility of huge downswings when the model is occasionally wrong (sell-off during Rebound phase), but these losses end up being erased by larger gains.
-- Overall, the model's success hinges on whether it can determine there is too much risk in the market or not.
-### Results of Different Allocations
-- Photos on how different regime-to-allocation mappings performed
-- In each strategy note that 0 is Rebound, 1 is Bear/crash-prone, and 2 is Expansion. Allocations are listed in this order.
-#### Strategy 1: 0: MTUM, 1: BIL, 2: SPY
-![Strategy 1 Chart](images./strategy1.PNG)
+- [Below](#results-of-different-portfolios), I have included photos of each of the previously mentioned allocations versus the market plus tabular results. You will notice that further increasing risk during the Rebound phase (such as with SPUU) raises the possibility of huge downswings when the model is occasionally wrong (sell-off during Rebound phase), but these losses end up being erased by larger gains.
+- Overall, the model's success hinges on whether it can determine there is too much risk in the market or not. It shows robust ability to do so, as evidenced by superior risk-adjusted returns throughout various portfolios.
+
 ---
 
 ## Next Steps
 - I plan on considering individual stocks/industries next. One important consideration for this route is the effect of upcoming catalysts. I largely looked past this (assumed any significant effect of this factor would be priced into VIX) since this levels out for an index fund.
 - Another interesting path would be creating a model that learns which factors inform your regime. There is an inherent tradeoff here between efficacy and interpretability, since an LSTM architecture could be useful for predicting a regime, but this may be of little use to a fund manager, eager to adjust their beta, who would have little way of gaining insight into why the model makes a given prescription.
 - A useful addition to the project would be creating a function that solves for a regime-to-portfolio mapping given a desired beta. This would be useful to a fund manager who wants a specific beta but is unsure of how to achieve this through a mapping given we cannot know the regime going forward.
+
+---
+
+## Results of Different Portfolios
+- Photos on how different regime-to-allocation mappings performed
+- In each strategy note that 0 is Rebound, 1 is Bear/crash-prone, and 2 is Expansion.
+### Strategy 1: 0: MTUM, 1: BIL, 2: SPY
+![Strategy 1 Chart](images./strategy1.PNG)
 
 ---
 
