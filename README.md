@@ -13,6 +13,8 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 - [Usage](#usage)
 - [Results](#results)
 - [Next Steps](#next-steps)
+- [Important Functions](#important-functions)
+- [Results of Different Portfolios](#results-of-different-portfolios)
 - [References](#references)
 
 ---
@@ -85,6 +87,9 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 - For a fund manager looking to decrease their beta, shorting the market during crash/bear would provide a compelling solution. Shorting the market during the Bear/crash-prone regime and sitting in BIL otherwise had a CAGR of 1%, but with its beta of -.31 it posted an annual alpha of 3.6%. Given SPY has a quite low borrow rate estimated at ~.25%, this strategy would provide a robust source of funds.
 - [Below](#results-of-different-portfolios), I have included photos of each of the previously mentioned allocations versus the market plus tabular results. I added various other possible portfolios. You will notice that further increasing risk during the Rebound phase (such as with SPUU) raises the possibility of huge downswings when the model is occasionally wrong (sell-off during Rebound phase), but these losses end up being erased by larger gains.
 - Overall, the model's success hinges on whether it can determine there is too much risk in the market or not. It shows robust ability to do so, as evidenced by superior risk-adjusted returns throughout various portfolios.
+- Directly below are photos of the regimes overlayed over the S&P for both the train and the test sets.
+![Train Regimes](images./trainregimes.PNG)
+![Test Regimes](images./testregimes.PNG)
 
 ---
 
@@ -95,6 +100,10 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 
 ---
 
+## Important Functions
+
+---
+
 ## Results of Different Portfolios
 - Photos on how different regime-to-allocation mappings performed
 - In each strategy note that 0 is Rebound, 1 is Bear/crash-prone, and 2 is Bull.
@@ -102,8 +111,64 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 ![Strategy 1 Chart](images./strategy1.PNG)
 <div align="center">
 
-<img src="images./strategy1.PNG" alt="Strategy 1" width="45%"/>
-<img src="images./strategy1.PNG" alt="Strategy 2" width="45%"/>
+<img src="images./strategy1stats.PNG" alt="Strategy 1 total stats" width="45%"/>
+<img src="images./strategy1yearly.PNG" alt="Strategy 1 yearly stats" width="45%"/>
+
+</div>
+### Strategy 2: 0: MTUM, 1: SH, 2: SPY
+![Strategy 2 Chart](images./strategy2.PNG)
+<div align="center">
+
+<img src="images./strategy2stats.PNG" alt="Strategy 2 total stats" width="45%"/>
+<img src="images./strategy2yearly.PNG" alt="Strategy 2 yearly stats" width="45%"/>
+
+</div>
+### Strategy 3: 0: BIL, 1: SH, 2: BIL
+![Strategy 3 Chart](images./strategy3.PNG)
+<div align="center">
+
+<img src="images./strategy3stats.PNG" alt="Strategy 3 total stats" width="45%"/>
+<img src="images./strategy3yearly.PNG" alt="Strategy 3 yearly stats" width="45%"/>
+
+</div>
+### Strategy 4: 0: BIL, 1: BIL, 2: SPY
+![Strategy 4 Chart](images./strategy4.PNG)
+<div align="center">
+
+<img src="images./strategy4stats.PNG" alt="Strategy 4 total stats" width="45%"/>
+<img src="images./strategy4yearly.PNG" alt="Strategy 4 yearly stats" width="45%"/>
+
+</div>
+### Strategy 5: 0: BIL, 1: BIL, 2: SPUU
+![Strategy 5 Chart](images./strategy5.PNG)
+<div align="center">
+
+<img src="images./strategy5stats.PNG" alt="Strategy 5 total stats" width="45%"/>
+<img src="images./strategy5yearly.PNG" alt="Strategy 5 yearly stats" width="45%"/>
+
+</div>
+### Strategy 6: 0: BIL, 1: SPXU, 2: BIL
+![Strategy 6 Chart](images./strategy6.PNG)
+<div align="center">
+
+<img src="images./strategy6stats.PNG" alt="Strategy 6 total stats" width="45%"/>
+<img src="images./strategy6yearly.PNG" alt="Strategy 6 yearly stats" width="45%"/>
+
+</div>
+### Strategy 7: 0: SPUU, 1: BIL, 2: SPUU
+![Strategy 7 Chart](images./strategy7.PNG)
+<div align="center">
+
+<img src="images./strategy7stats.PNG" alt="Strategy 7 total stats" width="45%"/>
+<img src="images./strategy7yearly.PNG" alt="Strategy 7 yearly stats" width="45%"/>
+
+</div>
+### Strategy 8: 0: SPUU, 1: SPXU, 2: SPUU
+![Strategy 8 Chart](images./strategy8.PNG)
+<div align="center">
+
+<img src="images./strategy8stats.PNG" alt="Strategy 8 total stats" width="45%"/>
+<img src="images./strategy8yearly.PNG" alt="Strategy 8 yearly stats" width="45%"/>
 
 </div>
 
