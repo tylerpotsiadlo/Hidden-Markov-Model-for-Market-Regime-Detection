@@ -71,3 +71,9 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 ---
 
 ## Project Structure
+
+---
+
+## Usage
+- Use this link to access the notebook: [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://hub.gesis.mybinder.org/user/tylerpotsiadlo--egime-detection-fbvs9d55/doc/workspaces/auto-P/tree/RegimeProject.ipynb)
+
