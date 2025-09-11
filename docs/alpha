@@ -1,0 +1,36 @@
+def compute_alpha_beta(portfolio_returns, market_returns, rf_rate_weekly=rf):
+    """
+    Estimates alpha and beta of a portfolio relative to the market using CAPM regression.
+
+    Parameters
+    ----------
+    portfolio_returns : pd.Series
+        Weekly portfolio returns (datetime index).
+    market_returns : pd.Series
+        Weekly market returns (datetime index), aligned with `portfolio_returns`.
+    rf_rate_weekly : float, optional
+        Weekly risk-free rate (default: global `rf`).
+
+    Returns
+    -------
+    tuple
+        alpha_ann : float
+            Annualized alpha from the regression.
+        beta : float
+            Sensitivity of the portfolio to market returns.
+        r_squared : float
+            R-squared statistic of the regression fit.
+    """
+    portfolio_excess = portfolio_returns - rf_rate_weekly
+    spy_excess = market_returns - rf_rate_weekly
+    
+    spy_excess = sm.add_constant(spy_excess)  #with intercept
+    model = sm.OLS(portfolio_excess, spy_excess).fit()
+    
+    alpha_weekly = model.params['const']
+    beta = model.params[spy_excess.columns[1]]
+    
+    # Annualize alpha
+    alpha_ann = (1 + alpha_weekly)**52 - 1
+    
+    return alpha_ann, beta, model.rsquared
