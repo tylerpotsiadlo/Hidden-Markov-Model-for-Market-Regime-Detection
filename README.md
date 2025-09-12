@@ -175,7 +175,6 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 </div>
 
 ### Strategy 8: 0: SPUU, 1: SPXU, 2: SPUU
-<a id="strategy-8"></a>
 ![Strategy 8 Chart](images./strategy8.PNG)
 <div align="center">
 
