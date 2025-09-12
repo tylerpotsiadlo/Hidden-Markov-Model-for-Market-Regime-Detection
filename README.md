@@ -204,6 +204,6 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 - **Name:** Tyler Potsiadlo
 - **Affiliation:** Boston College Class of 2027 | Mathematics B.S. & Economics B.A.
 - **Interests:** Quantitative Finance, Machine Learning
-- **Contact:** potsiadt@bc.edu
+- **Contact:** tylerpots@gmail.com
 - **GitHub:** https://github.com/tylerpotsiadlo
 - **LinkedIn:** https://www.linkedin.com/in/tyler-potsiadlo-887188288/
