@@ -73,7 +73,8 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 ---
 
 ## Usage
-- Use this link to access the notebook: [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://hub.gesis.mybinder.org/user/tylerpotsiadlo--egime-detection-qlefw9tw/doc/tree/RegimeProject.ipynb) (make sure to open in a new tab)
+- Use this link to access the notebook: [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://hub.gesis.mybinder.org/user/tylerpotsiadlo--egime-detection-qlefw9tw/doc/tree/RegimeProject.ipynb) (make sure to open in a new tab) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tylerpotsiadlo/Hidden-Markov-Model-for-Market-Regime-Detection/blob/main/RegimeProject.ipynb)
+
 - You can edit the features of interest, the regime-to-portfolio mapping, and the regime confirmation period hyperparameter
 - I would use caution picking a new ETF or asset to use during a given regime since you expose yourself to overfitting to the test set. For safety, the higher r-squared the asset has with SPY, the better (aside from short-dated gov't bonds, of course).
 - Changing a feature around likely will require you to ascribe a name to each regime the model predicts. For example, in my code, 0 -> Rebound, 1 -> Crash-prone, 2 -> Bull, but these very well may shuffle around if you change the features.
