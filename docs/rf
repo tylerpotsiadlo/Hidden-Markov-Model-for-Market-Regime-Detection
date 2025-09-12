@@ -1,0 +1,40 @@
+def get_weekly_rf_from_test(test_data):
+    """
+    Downloads 3-month Treasury bill yields from FRED and converts them into a weekly risk-free rate.
+
+    Parameters
+    ----------
+    test_data : pd.DataFrame
+        DataFrame with a datetime index representing the test period. The earliest
+        and latest dates are used to query FRED for the matching date range.
+
+    Returns
+    -------
+    float
+        Weekly risk-free rate (compounded from the average annualized yield).
+    """
+    start_date = test_data.index.min().strftime("%Y-%m-%d")
+    end_date = test_data.index.max().strftime("%Y-%m-%d")
+    
+    #FRED CSV URL for weekly series
+    url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id=WGS3MO&cosd={start_date}&coed={end_date}"
+    resp = requests.get(url)
+    raw = pd.read_csv(StringIO(resp.text))
+    
+    data = pd.read_csv(StringIO(resp.text), parse_dates=["observation_date"], index_col="observation_date")
+    
+    if data["WGS3MO"].isnull().all():
+        raise ValueError("No yield data fetched — check series or date range.")
+    
+    # FRED yields are in percent
+    yld = data["WGS3MO"].dropna() / 100.0
+    
+    avg_ann = yld.mean()
+    rf_weekly = (1 + avg_ann) ** (1/52.0) - 1
+    
+    print(f"Avg annual 3M T-bill yield (test period): {avg_ann:.3%}")
+    print(f"Weekly risk-free rate (compound): {rf_weekly:.6%}")
+    
+    return rf_weekly
+
+rf = get_weekly_rf_from_test(test_data)
