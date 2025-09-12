@@ -101,10 +101,13 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 ---
 
 ## Important Functions
-1. **Calculating Annual Alpha:** I calculated annual alpha by first running an ordinary least-squares regression where my weekly portfolio returns are the Y axis, and the market returns are on the X axis. The slope of this line is the strategy's beta, and the y-intercept is the alpha. This gives weekly alpha, so to put it into annual terms, I make the following assignment: alpha_ann = (1 + alpha_weekly)**52 - 1. ![This code can be viewed here.](docs/alpha)
+1. **Calculating Annual Alpha:** I calculated annual alpha by first running an ordinary least-squares regression where my weekly portfolio returns are the Y axis, and the market returns are on the X axis. The slope of this line is the strategy's beta, and the y-intercept is the alpha. This gives weekly alpha, so to put it into annual terms, I make the following assignment: alpha_ann = (1 + alpha_weekly)**52 - 1. This code can be viewed <a href="docs/alpha"><u>here</u></a>.
+
+
 -Total/annual alpha
+
 -risk free rate
--lookback
+-lookback![This code can be viewed here.](docs/alpha)
 
 ---
 
