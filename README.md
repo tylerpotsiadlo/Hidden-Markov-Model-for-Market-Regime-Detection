@@ -186,13 +186,13 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 ---
 
 ## References
-- [Yahoo Finance](https://finance.yahoo.com/) — historical ETF price data  
+- [Yahoo Finance](https://finance.yahoo.com/) — Historical ETF price data  
 - [FRED](https://fred.stlouisfed.org/) — 3-month Treasury yield (WGS3MO)  
 - [hmmlearn](https://hmmlearn.readthedocs.io/en/latest/) — Hidden Markov Models  
-- [pandas](https://pandas.pydata.org/) — data analysis and manipulation  
-- [numpy](https://numpy.org/) — numerical computing  
-- [matplotlib](https://matplotlib.org/) — plotting and visualization  
-- [seaborn](https://seaborn.pydata.org/) — statistical data visualization  
-- [statsmodels](https://www.statsmodels.org/) — econometric and statistical modeling  
+- [pandas](https://pandas.pydata.org/) — Data analysis and manipulation  
+- [numpy](https://numpy.org/) — Numerical computing  
+- [matplotlib](https://matplotlib.org/) — Plotting and visualization  
+- [seaborn](https://seaborn.pydata.org/) — Statistical data visualization  
+- [statsmodels](https://www.statsmodels.org/) — Econometric and statistical modeling  
 - Rabiner, L. R. (1989). *A Tutorial on Hidden Markov Models and Selected Applications in Speech Recognition*. *Proceedings of the IEEE, 77*(2), 257–286.  
 - Hamilton, J. D. (1989). *A New Approach to the Economic Analysis of Nonstationary Time Series and the Business Cycle*. *Econometrica, 57*(2), 357–384.  
