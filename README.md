@@ -104,7 +104,7 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 1. **Calculating Annual Alpha:** I calculated annual alpha by first running an ordinary least-squares regression where my weekly portfolio returns are the Y axis, and the market returns are on the X axis. The slope of this line is the strategy's beta, and the y-intercept is the alpha. This gives weekly alpha, so to put it into annual terms, I make the following assignment: alpha_ann = (1 + alpha_weekly)**52 - 1. This code can be viewed <a href="docs/alpha"><u>here</u></a>.
 2. **Calculating Risk-free Rate:** One important input into my alpha calculation is the risk-free rate. I decided to choose the risk free rate as the average 3-month T-bill yield from FRED's WGS3MO CSV. This gets average annualized yield, but I needed average weekly yield for my calculation, so I make the following assignment: rf_weekly = (1 + avg_ann) ** (1/52.0) - 1. This code can be viewed <a href="docs/rf"><u>here</u></a>. This method can be checked against the S&P, and it confirms with alpha = 0.
 3. **Look-Ahead Bias?**: It's important to show my strategy doesn't include look-ahead bias, as that would make it worthless. However, every date, portfolio weights are chosen based only on the regime classification known at that date, and strategy returns are then calculated sequentially. No future information is ever used when making allocation decisions, so the backtest is free from forward-looking bias. Code to prove this can be viewed <a href="docs/lookahead"><u>here</u></a>.
-4. **Calmar Ratio**: One metric I included in my stats was the Calmar ratio. Calmar ratio is a risk-adjusted return metric taking into account CAGR and maximum drawdown. It is calculated as CAGR/max drawdown. I decided to include this because some strategies have superior return metrics but very high maximum drawdown. For example, in [strategy 8](##strategy-8-0-spuu-1-spxu-2-spuu), the user may have sold in 2023 before making all losses back in 2024. This portfolio had a worse Calmar ratio than the market. This was also captured by Sharpe ratio, but Sharpe's flaw in this instance is weighing upside volatility the same as downside volatility.
+4. **Calmar Ratio**: One metric I included in my stats was the Calmar ratio. Calmar ratio is a risk-adjusted return metric taking into account CAGR and maximum drawdown. It is calculated as CAGR/max drawdown. I decided to include this because some strategies have superior return metrics but very high maximum drawdown. For example, in [strategy 8](#strategy-8-0-spuu-1-spxu-2-spuu), the user may have sold in 2023 before making all losses back in 2024. This portfolio had a worse Calmar ratio than the market. This was also captured by Sharpe ratio, but Sharpe's flaw in this instance is weighing upside volatility the same as downside volatility.
 
 ---
 
@@ -175,6 +175,7 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 </div>
 
 ### Strategy 8: 0: SPUU, 1: SPXU, 2: SPUU
+<a id="strategy-8"></a>
 ![Strategy 8 Chart](images./strategy8.PNG)
 <div align="center">
 
