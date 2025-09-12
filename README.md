@@ -193,7 +193,8 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 - [hmmlearn](https://hmmlearn.readthedocs.io/en/latest/) — Hidden Markov Models  
 - [pandas](https://pandas.pydata.org/) — Data analysis and manipulation  
 - [numpy](https://numpy.org/) — Numerical computing  
-- [matplotlib](https://matplotlib.org/) — Plotting and visualization  
+- [matplotlib](https://matplotlib.org/) — Plotting and visualization
+- [SciPy](https://www.scipy.org/) — Statistical computing
 - [seaborn](https://seaborn.pydata.org/) — Statistical data visualization  
 - [statsmodels](https://www.statsmodels.org/) — Econometric and statistical modeling  
 - Rabiner, L. R. (1989). *A Tutorial on Hidden Markov Models and Selected Applications in Speech Recognition*. *Proceedings of the IEEE, 77*(2), 257–286.  
