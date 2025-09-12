@@ -16,6 +16,7 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 - [Important Functions](#important-functions)
 - [Results of Different Portfolios](#results-of-different-portfolios)
 - [References](#references)
+- [Author](#author)
 
 ---
 
@@ -195,4 +196,14 @@ The goal is to identify distinct market regimes (e.g., rebound, bear/crash prone
 - [seaborn](https://seaborn.pydata.org/) — Statistical data visualization  
 - [statsmodels](https://www.statsmodels.org/) — Econometric and statistical modeling  
 - Rabiner, L. R. (1989). *A Tutorial on Hidden Markov Models and Selected Applications in Speech Recognition*. *Proceedings of the IEEE, 77*(2), 257–286.  
-- Hamilton, J. D. (1989). *A New Approach to the Economic Analysis of Nonstationary Time Series and the Business Cycle*. *Econometrica, 57*(2), 357–384.  
+- Hamilton, J. D. (1989). *A New Approach to the Economic Analysis of Nonstationary Time Series and the Business Cycle*. *Econometrica, 57*(2), 357–384.
+
+---
+
+## Author
+- **Name:** [Tyler Potsiadlo]  
+- **Affiliation:** [Boston College Class of 2027 | Mathematics B.S. & Economics B.A.]
+- **Interests:** [Quantitative Finance, Machine Learning]
+- **Contact:** [potsiadt@bc.edu]
+- **GitHub:** [https://github.com/tylerpotsiadlo]
+- **LinkedIn:** [https://www.linkedin.com/in/tyler-potsiadlo-887188288/]
