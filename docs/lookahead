@@ -1,0 +1,15 @@
+for date, row in returns.iterrows():
+    if date not in test_data.index:
+        continue
+    regime = test_data.loc[date, "Confirmed_Regime"]
+    weights = regime_to_weights(int(regime))
+
+    # compute weighted return
+    port_ret = sum(weights.get(asset, 0) * row.get(asset, 0) for asset in returns.columns)
+    strategy_returns.append((date, port_ret))
+
+strategy_returns = pd.Series(
+    [ret for _, ret in strategy_returns],
+    index=[date for date, _ in strategy_returns],
+    name="Strategy"
+)
